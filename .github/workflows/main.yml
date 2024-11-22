@@ -1,1 +1,19 @@
-# this is second task of OS2
+# this is second task of OS
+
+name: 'rania walid'
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: "the path"
+        run: pwd
+      - name: "printing name"
+        run: echo rania
+
