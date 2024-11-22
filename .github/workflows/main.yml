@@ -12,7 +12,15 @@ jobs:
  build:
     runs-on: ubuntu-latest
     steps:
+      - name: "Print the path"
+        run: pwd
+      - name: "Print name"
+        run: echo rania
+      - name: "Before Add Action"
+        run: ls
       - uses: actions/checkout@v3
+      - name: "After Add Action"
+        run: ls -a
       - name: " login to dockerhub"
         run: docker login --username ${{ secrets.USERNAME_TOKEN }} --password ${{ secrets.PASSWORD_TOKEN }}
       - name: " build image "
